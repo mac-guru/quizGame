@@ -8,8 +8,23 @@
 
 import UIKit
 
+
+struct Quesestion {
+    var Question: String!
+    var Answers: [String]!
+    var Answer: Int!
+}
+
+
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var QuesionLabel: UILabel!
+    
+    @IBOutlet var Buttons: [UIButton]!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -97,6 +97,13 @@
                             <constraint firstItem="cui-ZC-eo2" firstAttribute="top" secondItem="Rqp-bS-Mab" secondAttribute="bottom" constant="8" id="zz0-ce-jtG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="QuesionLabel" destination="6Mk-7F-mKH" id="g1a-OD-l7W"/>
+                        <outletCollection property="Buttons" destination="Qm5-kM-ydO" collectionClass="NSMutableArray" id="tD7-N5-aSN"/>
+                        <outletCollection property="Buttons" destination="Rqp-bS-Mab" collectionClass="NSMutableArray" id="u2k-k6-Yem"/>
+                        <outletCollection property="Buttons" destination="cui-ZC-eo2" collectionClass="NSMutableArray" id="EqN-LU-IWr"/>
+                        <outletCollection property="Buttons" destination="F6A-RF-EK7" collectionClass="NSMutableArray" id="8EE-qA-KsB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
