@@ -68,10 +68,28 @@ class ViewController: UIViewController {
         
     }
     
+   
+    func userDidUpdate()
+    {
+        let title = "Dome!!"
+        let message = "Question Finish"
+        
+        UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK").show()
+    }
+    
+    func wrongAns()
+    {
+        let title = "Worng Ans!!"
+        let message = "Try Again"
+        
+        UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK").show()
+    }
+    
+    
     
     func pickQuestion(){
         if Questions.count > 0{
-            QNumber = 0
+            QNumber = random() % Questions.count
             QuesionLabel.text = Questions[QNumber].Question
             
             AnswerNumber = Questions[QNumber].Answer
@@ -83,10 +101,14 @@ class ViewController: UIViewController {
         }
         else
         {
-            NSLog("Question Finish")
+            NSLog("Question Finished");
+            userDidUpdate();
+        
         }
     
     }
+    
+    
 
     
     @IBAction func button1(sender: AnyObject) {
@@ -99,6 +121,7 @@ class ViewController: UIViewController {
         }
         else{
           
+            wrongAns();
         }
         
     }
@@ -110,7 +133,7 @@ class ViewController: UIViewController {
             increaseScore();
         }
         else{
-            
+            wrongAns();
         }
     }
     
@@ -121,7 +144,7 @@ class ViewController: UIViewController {
              increaseScore();
         }
         else{
-            
+            wrongAns();
         }
         
         
@@ -134,7 +157,7 @@ class ViewController: UIViewController {
              increaseScore();
         }
         else{
-            
+            wrongAns();
         }
     }
    
